@@ -269,6 +269,4 @@ print(list)
 list.insert(0, 0)
 print(list)
 
-
-
-
+print(list.index(3))
