@@ -17,3 +17,5 @@ print(count)
 list = [8,3,2,9]
 list.sort()
 print(list)
+list.reverse() #reverse the list
+print(list)
