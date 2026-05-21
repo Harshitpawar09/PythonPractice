@@ -20,7 +20,9 @@ list = [5,2,8,3,9]
 
 
 
-print(10 in list)
-print(11 not in list )
-print(3 in list)
-print(3 not in list )
+# print(10 in list)
+# print(11 not in list )
+# print(3 in list)
+# print(3 not in list )
+
+
