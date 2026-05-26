@@ -156,10 +156,41 @@
 # print(mult(7))
 
 
-def my_function():
-    global var
-    var = 2
-    print("Do I know the variable ?", var)
-var = 1
-my_function() #variable var is defined as global inside the function, it will change the value of var to 2.
-print(var)
+# def my_function():
+#     global var
+#     var = 2
+#     print("Do I know the variable ?", var)
+# var = 1
+# my_function() #variable var is defined as global inside the function, it will change the value of var to 2.
+# print(var)
+
+
+# var = 2
+# print(var)
+# def return_var():
+#     global var
+#     var = 5
+#     return var
+# print(return_var())
+# print(var)
+
+
+# def my_function(n):
+#     print("I got", n)
+#     n += 1
+#     print("I have", n)
+
+# var = 1
+# my_function(var)
+# print(var)
+
+
+def my_function(my_list_1):
+    print("print #1:", my_list_1)
+    print("print #2:", my_list_2)
+    my_list_1 = [0,1]
+    print("print #3:", my_list_1)
+    print("print #4:", my_list_2)
+my_list_2 = [2,3]
+my_function(my_list_2)
+print("print #5:", my_list_2)
