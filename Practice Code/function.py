@@ -185,12 +185,43 @@
 # print(var)
 
 
-def my_function(my_list_1):
-    print("print #1:", my_list_1)
-    print("print #2:", my_list_2)
-    my_list_1 = [0,1]
-    print("print #3:", my_list_1)
-    print("print #4:", my_list_2)
-my_list_2 = [2,3]
-my_function(my_list_2)
-print("print #5:", my_list_2)
+# def my_function(my_list_1):
+#     print("print #1:", my_list_1)
+#     print("print #2:", my_list_2)
+#     my_list_1 = [0,1]
+#     print("print #3:", my_list_1)
+#     print("print #4:", my_list_2)
+# my_list_2 = [2,3]
+# my_function(my_list_2)
+# print("print #5:", my_list_2)
+
+
+# def my_function(my_list_1):
+#     print("print #1:", my_list_1)
+#     print("print #2:", my_list_2)
+#     del my_list_1[0]
+#     print("print #3:", my_list_1)
+#     print("print #4:", my_list_2)
+# my_list_2 = [2,3]
+# my_function(my_list_2)
+# print("print #5:", my_list_2)
+
+
+# def countdown(number):
+#     print(number)
+#     if number == 0:
+#         return
+#     else:
+#         print("Going in rec:", number)
+#         countdown(number - 1)
+#         print("Coming out of rec:", number)
+# print("We start here.")
+# countdown(5)
+# print("We end here.")
+
+def factorial(n):
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n-1)
+print(factorial(5))
