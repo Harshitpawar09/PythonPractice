@@ -123,10 +123,43 @@
 
 
 
-def strange_list_fun(n):
-    strange_list = []
-    for i in range(0, n):
-        # strange_list.insert(0, i+1)
-        strange_list.append(i+1)
-    return strange_list
-print(strange_list_fun(5))
+# def strange_list_fun(n):
+#     strange_list = []
+#     for i in range(0, n):
+#         # strange_list.insert(0, i+1)
+#         strange_list.append(i+1)
+#     return strange_list
+# print(strange_list_fun(5))
+
+
+
+
+#Scope
+
+# def my_function():
+#     x = 123
+# my_function()
+# print(x) #variable x is not defined outside the function, it will give an error.
+
+
+# def my_function():
+#     print("Do I know the variable ?", var)
+# var = 1
+# my_function() #variable var is defined outside the function, it will give the value of var as 1.
+# print(var)
+
+
+# def mult(x):
+#     var = 7
+#     return x * var
+# var = 3
+# print(mult(7))
+
+
+def my_function():
+    global var
+    var = 2
+    print("Do I know the variable ?", var)
+var = 1
+my_function() #variable var is defined as global inside the function, it will change the value of var to 2.
+print(var)
