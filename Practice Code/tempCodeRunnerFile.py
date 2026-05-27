@@ -1,4 +1,3 @@
-
-# my_tuple = (1, 2, 3)
-# for i in my_tuple:
-#     print(i)
+print(dictionary['cat'])
+# print(phone_number['boss'])
+# print(phone_number['president']) # KeyError: 'president' not found in phone_number
