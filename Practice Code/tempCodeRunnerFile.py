@@ -1,1 +1,4 @@
-adding(3, a=1, b=2)
+
+# my_tuple = (1, 2, 3)
+# for i in my_tuple:
+#     print(i)
