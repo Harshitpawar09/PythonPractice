@@ -69,10 +69,66 @@
 
 #Pop Item
 
-pol_eng_dictionary = {"kwiat": "flower"}
-pol_eng_dictionary.update(
-    {"gleba": "soil"
-    })
-print(pol_eng_dictionary)
-pol_eng_dictionary.popitem()
-print(pol_eng_dictionary)
+# pol_eng_dictionary = {"kwiat": "flower"}
+# pol_eng_dictionary.update(
+#     {"gleba": "soil"
+#     })
+# print(pol_eng_dictionary)
+# pol_eng_dictionary.popitem()
+# print(pol_eng_dictionary)
+
+
+# pol_eng_dictionary = {
+#     "zamek" : "castle",
+#     "woda" : "water",
+#     "gleba" : "soil"
+# }
+# if "zamek" in pol_eng_dictionary: 
+#     print("Yes! zamek is present in the Dictionary")
+# else:
+#     print("No! zamek is not present in the Dictionary")
+
+
+
+# #Clear Method
+
+# print(pol_eng_dictionary)
+# print(len(pol_eng_dictionary))
+
+# del pol_eng_dictionary["zamek"]
+# print(pol_eng_dictionary)
+# print(len(pol_eng_dictionary))
+
+# pol_eng_dictionary.clear()
+# print(pol_eng_dictionary)
+# print(len(pol_eng_dictionary))
+
+# del pol_eng_dictionary
+# print(pol_eng_dictionary)
+
+
+#Student Average Score
+sd={}
+while True:
+    name = input("Enter student's name:")
+    if name == "":
+        break
+    score = int(input(f"Enter ${name}'s score:"))
+
+    if score not in range (1,11):
+        break
+    if name in sd:
+        sd[name] +=(score,)
+    else:
+        sd[name] = (score,)
+# for mark in sd:
+#     print(mark)
+print(sd)
+
+for name, mark in sd.items():
+    sum = 0
+    # print(name,"->")
+    for m in mark:
+        # print(m)
+        sum += m
+    print(name, "->", sum/len(mark))        
