@@ -47,8 +47,38 @@
 # print(example_object_3.__dict__)
 
 
-class Classy:
-    def method(self, par):
-        print("method", par)
-obj = Classy()
-obj.method(1)
+# class Classy:
+#     def method(self, par):
+#         print("method", par)
+# obj = Classy()
+# obj.method(1)
+
+
+# class Classy:
+#     varia = 2
+#     def method(self):
+#         print(self.varia, self.var)
+# obj = Classy()
+# obj.var = 3
+# obj.method()
+
+
+# class Star:
+#     def __init__(self, name, galaxy):
+#         self.name = name
+#         self.galaxy = galaxy
+# sun = Star("Sun", "Milky Way")
+# print(sun)
+
+
+#str method
+
+
+class Star:
+    def __init__(self, name, galaxy):
+        self.name = name
+        self.galaxy = galaxy
+    def __str__(self):
+        return self.name + ' in ' + self.galaxy
+sun = Star("Sun", "Milky Way")
+print(sun)
