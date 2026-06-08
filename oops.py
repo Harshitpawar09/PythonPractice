@@ -124,7 +124,7 @@
 
 #MultiLevel Inheritance
 
-
+'''
 class Level1:
     variable_1 = 100
     def __init__(self):
@@ -152,3 +152,22 @@ obj = Level3()
 print(obj.variable_1, obj.var_1, obj.fun_1())
 print(obj.variable_2, obj.var_2, obj.fun_2())
 print(obj.variable_3, obj.var_3, obj.fun_3())
+'''
+
+
+
+
+#Class Varaible
+
+class ExampleClass:
+    counter = 0
+    def __init__(self,val = 1):
+        self.__first = val
+        ExampleClass.counter += 1
+
+example_object_1 = ExampleClass()
+example_object_2 = ExampleClass(2)
+example_object_3 = ExampleClass(4)
+print(example_object_1.__dict__,example_object_1.counter)
+print(example_object_2.__dict__,example_object_2.counter)
+print(example_object_3.__dict__,example_object_3.counter)   
