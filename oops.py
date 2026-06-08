@@ -173,20 +173,74 @@ print(obj.variable_3, obj.var_3, obj.fun_3())
 # print(example_object_3.__dict__,example_object_3.counter)   
 
 
-#Try Except Block
-class ExampleClass:
-    counter = 0
-    def __init__(self, val = 1):
-        ExampleClass.counter += 1
-        if val % 2 != 0:
-            self.a = 1
-        else:
-            self.b = 2
-example_object = ExampleClass(2)
+# #Try Except Block
+# class ExampleClass:
+#     counter = 0
+#     def __init__(self, val = 1):
+#         ExampleClass.counter += 1
+#         if val % 2 != 0:
+#             self.a = 1
+#         else:
+#             self.b = 2
+# example_object = ExampleClass(2)
+# try:
+#     print("a = ", example_object.a)
+# except AttributeError:
+#     try:
+#         print("b = ", example_object.b)
+#     except AttributeError:
+#         print("The error occurred ! Silently passing it !!")
+
+
+
+
+# class ExampleClass:
+#     counter = 0
+#     a = 1
+#     def __init__(self, val = 1):
+#         ExampleClass.counter += 1
+#         if val % 2 != 0:
+#             self.a = 1
+#         else:
+#             self.b = 1
+# example_object = ExampleClass(1)
+# if hasattr(example_object, 'a'):
+#     print("a = ", example_object.a)
+# if hasattr(example_object, 'b'):
+#     print("b = ", example_object.b)
+# print(hasattr(example_object, 'b'))
+# print(hasattr(example_object, 'a'))
+
+
+
+
+
+
+# class Python:
+#     population = 1
+#     victims = 0
+#     def __init__(self):
+#         self.length_ft = 1
+#         self.__venomous = False
+# myObj = Python()
+# print("myObj.population:", myObj.population)
+# print("myObj.victims:", myObj.victims)
+# print("myObj.length_ft:", myObj.length_ft)
+# print("myObj.__venomous:", myObj._Python__venomous)
+# # print("myObj.venomous:", myObj.venomous)
+
+
+
+#Name Mangling in methods
+class Classy:
+    def visible(self):
+        print("This is a visible method")
+    def __hidden(self):
+        print("This is a hidden method")
+obj = Classy()
+obj.visible()
 try:
-    print("a = ", example_object.a)
-except AttributeError:
-    try:
-        print("b = ", example_object.b)
-    except AttributeError:
-        print("The error occurred ! Silently passing it !!")
+    obj.__hidden()
+except:
+    print("Failed")
+obj._Classy__hidden()
