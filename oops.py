@@ -159,15 +159,34 @@ print(obj.variable_3, obj.var_3, obj.fun_3())
 
 #Class Varaible
 
+# class ExampleClass:
+#     counter = 0
+#     def __init__(self,val = 1):
+#         self.__first = val
+#         ExampleClass.counter += 1
+
+# example_object_1 = ExampleClass()
+# example_object_2 = ExampleClass(2)
+# example_object_3 = ExampleClass(4)
+# print(example_object_1.__dict__,example_object_1.counter)
+# print(example_object_2.__dict__,example_object_2.counter)
+# print(example_object_3.__dict__,example_object_3.counter)   
+
+
+#Try Except Block
 class ExampleClass:
     counter = 0
-    def __init__(self,val = 1):
-        self.__first = val
+    def __init__(self, val = 1):
         ExampleClass.counter += 1
-
-example_object_1 = ExampleClass()
-example_object_2 = ExampleClass(2)
-example_object_3 = ExampleClass(4)
-print(example_object_1.__dict__,example_object_1.counter)
-print(example_object_2.__dict__,example_object_2.counter)
-print(example_object_3.__dict__,example_object_3.counter)   
+        if val % 2 != 0:
+            self.a = 1
+        else:
+            self.b = 2
+example_object = ExampleClass(2)
+try:
+    print("a = ", example_object.a)
+except AttributeError:
+    try:
+        print("b = ", example_object.b)
+    except AttributeError:
+        print("The error occurred ! Silently passing it !!")
