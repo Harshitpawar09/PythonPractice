@@ -231,16 +231,24 @@ print(obj.variable_3, obj.var_3, obj.fun_3())
 
 
 
-#Name Mangling in methods
-class Classy:
-    def visible(self):
-        print("This is a visible method")
-    def __hidden(self):
-        print("This is a hidden method")
-obj = Classy()
-obj.visible()
-try:
-    obj.__hidden()
-except:
-    print("Failed")
-obj._Classy__hidden()
+# #Name Mangling in methods
+# class Classy:
+#     def visible(self):
+#         print("This is a visible method")
+#     def __hidden(self):
+#         print("This is a hidden method")
+# obj = Classy()
+# obj.visible()
+# try:
+#     obj.__hidden()
+# except:
+#     print("Failed")
+# obj._Classy__hidden()
+
+# obj = Classy()
+# print(type(obj))
+# print(type(obj).__name__)
+
+
+
+
