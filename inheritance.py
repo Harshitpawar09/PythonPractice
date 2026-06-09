@@ -37,14 +37,37 @@
 
 
 
-class Super:
-    def __init__(self, name):
-        self.name = name
+# class Super:
+#     def __init__(self, name):
+#         self.name = name
 
-    def __str__(self):
-        return "My name is " + self.name + "."
-class Sub(Super):
-    def __init__(self, name):
-        Super.__init__(self, name)
-obj = Sub("John")
-print(obj)
+#     def __str__(self):
+#         return "My name is " + self.name + "."
+# class Sub(Super):
+#     def __init__(self, name):
+#         super().__init__(name)
+# obj = Sub("John")
+# print(obj)
+
+
+
+
+
+#Multiple Inheritance
+
+class SuperA:
+    var_a = 10
+    def fun_a(self):
+        return 11
+
+class SuperB:
+    var_b = 20
+    def fun_b(self):
+        return 21
+
+class Sub(SuperA, SuperB):
+    pass
+
+obj = Sub()
+print(obj.var_a, obj.fun_a())
+print(obj.var_b, obj.fun_b())
