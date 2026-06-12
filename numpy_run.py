@@ -23,7 +23,24 @@ import numpy as np
 
 
 
-arr = np.array([10,20,30,40,50])
-print(arr * 2)
-print(arr + 5)
-print(arr ** 2)
+# arr = np.array([10,20,30,40,50])
+# print(arr * 2)
+# print(arr + 5)
+# print(arr ** 2)
+
+
+
+
+#Statics Operation
+# marks_2d = np.array([[85,90,78], [72,88,95], [91,76,83]])
+# print(np.mean(marks_2d))
+# print(np.mean(marks_2d, axis=1))
+# print(np.mean(marks_2d, axis=0))
+# print(np.max(marks_2d))
+# print(np.std(marks_2d))
+
+
+
+
+arr = np.array ([55,82,43,91,67,78,35,88])
+print(arr[arr > 70])
