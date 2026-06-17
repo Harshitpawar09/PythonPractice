@@ -50,7 +50,25 @@ df = pd.DataFrame({
     'study_hours': np.random.uniform(2,10,100),
     'city': np.random.choice(['Bhopal', 'Indore', 'Jabalpur'],100),
     'gender': np.random.choice(['male','Female'],100)})
-plt.figure(figsize=(10,4))
-sns.histplot(df['marks'], bins = 20, kde =True, color='steelblue')
-plt.title('Distribution of student marks')
-plt.show()
+# plt.figure(figsize=(10,4))
+# sns.histplot(df['marks'], bins = 20, kde =True, color='steelblue')
+# plt.title('Distribution of student marks')
+# plt.show()
+
+
+
+# sns.boxplot(data=df, x='city', y='marks', palette='Set2')
+# plt.title('Marks distribution by city')
+# plt.show()
+
+
+# plt.figure(figsize=(5,4))
+# sns.heatmap(df[['marks', 'study_hours']].corr(),annot=True,cmap='coolwarm', vmin=-1,  vmax=1)
+# plt.title('Correlation Matrix')
+# plt.show()
+
+
+# sns.pairplot(df[['marks', 'study_hours']], diag_kind='kde')
+# plt.show()
+
+
