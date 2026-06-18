@@ -2,6 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 import seaborn as sns
+from scipy import stats
 
 np.random.seed(42)
 study = np.random.uniform(2,10,60)
@@ -20,4 +21,4 @@ plt.title('Correlation Matrix'); plt.show()
 
 r, p_value = stats.pearsonr(study, marks)
 print(f'Study-Marks Correlation: r = {r:.3f}, p={p_value:.4f}')
-print('Interpreation:', 'Strong positive' if r>0.7 else 'Moderate' if r>0.4 else 'Weak')
+print('Interpretation:', 'Strong positive' if r>0.7 else 'Moderate' if r>0.4 else 'Weak')
