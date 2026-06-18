@@ -81,7 +81,7 @@
 
 
 
-# price, gst = 500, 0.18
+# price, +gst = 500, 0.18
 # print(f'price:rs{price} | gst:rs. {price*gst:.2f} | total:rs. {price*(1+gst):.2f}')
 
 
