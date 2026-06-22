@@ -30,9 +30,14 @@ y_pred = model.predict(Xte)
 print(f'Accuracy: {accuracy_score(y_test,y_pred)*100:.1f}%')
 print(classification_report(y_test,y_pred, target_names=['Fail','Pass']))
 
-#Confusion Matrix
-cm = confusion_matrix(y_test,y_pred)
-sns.heatmap(cm,annot=True,fmt='d',cmap='Blues',
-            xticklabels=['Fail','Pass'],yticklabels=['Fail','Pass'])
-plt.title('Confusion Matrix'); plt.show()
+# #Confusion Matrix
+# cm = confusion_matrix(y_test,y_pred)
+# sns.heatmap(cm,annot=True,fmt='d',cmap='Blues',
+#             xticklabels=['Fail','Pass'],yticklabels=['Fail','Pass'])
+# plt.title('Confusion Matrix'); plt.show()
 
+#Predict new student
+new = scaler.transform([[7,85,9]])
+pred = model.predict(new)[0]
+prob = model.predict_proba(new)[0]
+print(f'Prediction: {"Pass" if pred==1 else "FAIL"} | Probability: {prob[1]*100:.1f}%')
