@@ -13,7 +13,7 @@
 
 
 
-#Exception handling
+# Exception handling
 
 # def reciprocal(n):
 #     try:

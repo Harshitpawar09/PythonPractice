@@ -78,4 +78,4 @@ print(f'Random forest accuracy: {accuracy_score(y_test,rf.predict(X_test))*100:.
 import pandas as pd
 imp = pd.Series(rf.feature_importances_,index=iris.feature_names).sort_values(ascending=False)
 imp.plot(kind='bar',color='steelblue')
-plt.title('Feature Importance'); plt.tight_layout(); plt.show
+plt.title('Feature Importance'); plt.tight_layout(); plt.show()
